@@ -26,7 +26,7 @@ print("Hello World!")
     Hello World!
 
 
-Now, go ahead and write an python code in the chunk below that prints your favorite movie. Here is my output:
+Now, go ahead and write python code in the chunk below that prints your favorite movie. Here is my output:
 
 <code>My favorite movie is Big Fish!</code>
 
