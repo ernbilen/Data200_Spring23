@@ -59,3 +59,5 @@ Homework           |   25   |    25.0%   |
 * [QuantEcon](https://quantecon.org)
 * [Live question link](https://itempool.com/ernbilen/live)
 * [Eval link](https://dickinson.campuslabs.com/courseeval)
+
+This is Adia modifying the README.md file for data 200 courses in Dickinson Spring 2023. 
