@@ -13,6 +13,7 @@
 * **QRA Office Hours:** TBA
 
 ## Course description ##
+Hello, I'm Trang 
 
 Welcome to Data 200! This course provides an introduction to the management and manipulation of database systems as it applies to data analytics. Topics include data query languages, relational database, APIs/webscraping, transforming and restructuring data representations. Upon successful completion of the course a student will be able to
 * understand the tabular data model, the relational data model, and hierarchical data model
