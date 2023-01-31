@@ -12,7 +12,7 @@ I will grade your assignment by opening your "hw0.ipynb" file in Jupyter (in a d
 Please enter your name by double clicking on the cell below, and after yout your name, run it with Shift + Enter.
 
 
-# Name:
+# Name: Adia Wu
 
 # Task 1
 
@@ -24,7 +24,7 @@ print("Hello World!")
 ```
 
     Hello World!
-
+    
 
 Now, go ahead and write python code in the chunk below that prints your favorite movie. Here is my output:
 
@@ -32,8 +32,12 @@ Now, go ahead and write python code in the chunk below that prints your favorite
 
 
 ```python
-
+movie = "Captain America"
+print("My favorite Movie is ", movie)
 ```
+
+    My favorite Movie is  Captain America
+    
 
 # Task 2
 
