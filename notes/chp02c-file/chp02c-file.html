@@ -406,12 +406,12 @@ Eren Bilen
     </div>
 </div>
 
-  <p class="date">1/30/23</p>
+  <p class="date">2/3/23</p>
 </section>
 <section id="operating-systems" class="title-slide slide level1 center">
 <h1>Operating Systems</h1>
 <ul>
-<li>Operating systems, such as Windows, MacOS, or Linux have similar file system structures.
+<li><p>Operating systems, such as Windows, MacOS, or Linux have similar file system structures.</p>
 <ul>
 <li>Files are store as sequences of bits (0’s and 1’s) forming bytes (8-bits).</li>
 <li>Files whose bytes represent sequences of characters are called text files (typically have a .txt extension).</li>
@@ -423,7 +423,7 @@ Eren Bilen
 <section id="files" class="title-slide slide level1 center">
 <h1>Files</h1>
 <ul>
-<li>Files can be anything; source programs, executable problems, libraries, media, data…
+<li><p>Files can be anything; source programs, executable problems, libraries, media, data…</p>
 <ul>
 <li>One program can create a file and another program can read and process the file.</li>
 <li>Files on the local file system are the simplest source of data.</li>
@@ -431,30 +431,17 @@ Eren Bilen
 </ul>
 </section>
 
-<section id="three-main-parts-of-most-files" class="title-slide slide level1 center">
-<h1>Three Main Parts of Most Files</h1>
-<div class="column" style="width:45%;">
-<p><img data-src="assets/img/image3.png" style="width:3in"></p>
-</div>
-<div class="column" style="width:45%;">
-<ol type="1">
-<li><strong>Header:</strong> metadata about the contents of the file (file name, size, type, and so on).</li>
-<li><strong>Data:</strong> contents of the file as written by the creator or editor.</li>
-<li><strong>End of file:</strong> special character that indicates the end of the file.</li>
-</ol>
-</div>
-</section>
-
 <section id="hierarchical-organization" class="title-slide slide level1 center">
 <h1>Hierarchical Organization</h1>
 <ul>
-<li>Operating systems utilize a hierarchical organization to organize files.
+<li><p>Operating systems utilize a hierarchical organization to organize files.</p>
 <ul>
-<li>This hierarchy defines a tree , where the root and interior nodes of the tree provide the abstraction of a directory or folder .</li>
-<li>Each folder can have contents, which are the children of the folder node in the tree.</li>
-<li>The child contents of a folder can consist of zero or more files as well as zero or more (sub)folders.</li>
-<li>A leaf is a node with no children. As internal node is a node that is not a leaf. A file must be a leaf of the tree, as it cannot have any subordinate folders or files.</li>
-</ul></li>
+<li>A tree, with the root and interior nodes of the tree</li>
+<li>Each folder can have contents: the children of the node in the tree.</li>
+<li>The children contents of a folder can have zero or more files (and/or zero or more (sub)folders.)</li>
+<li>A leaf is a node with no children.</li>
+</ul>
+<p><strong>True/False?</strong> A file must be a leaf on the tree.</p></li>
 </ul>
 </section>
 
@@ -462,7 +449,6 @@ Eren Bilen
 <h1></h1>
 
 <img data-src="assets/img/image4.png" class="r-stretch"><ul>
-<li><p>This is abstracted from a Linux system.</p></li>
 <li><p>Note: “…” represents a sub-tree not pictured.</p></li>
 <li><p>The “/” denotes the root of the file system</p></li>
 </ul>
@@ -472,7 +458,7 @@ Eren Bilen
 <h1></h1>
 <p><img data-src="assets/img/image5.png" style="height:3.8in"></p>
 <ul>
-<li>Here we focus on the user <span class="math inline">\(\texttt{alice}\)</span> and the subtree in the file system that represents her home directory, which is the portion of the file system she sees when see logs in, and when she starts a File Explorer.</li>
+<li>Here we focus on the user <span class="math inline">\(\texttt{alice}\)</span> and the subtree in the file system that shows her home directory.</li>
 </ul>
 </section>
 
@@ -482,8 +468,14 @@ Eren Bilen
 <img data-src="assets/img/image6.png" class="r-stretch"><ul>
 <li><p>Above is what we might see using a File Explorer on a Mac after navigating to Alice’s the <span class="math inline">\(\texttt{Documents}\)</span> folder.</p></li>
 <li><p>It’s important to realize that the File Explorer is not the only interface to the underlying file system structure.</p></li>
-<li><p>For example, files and folders can also be accessed directly using applications such as Terminal on a MacOS or Command Prompt on Windows.</p></li>
 </ul>
+<div class="fragment">
+<div style="margin-left:50px; font-size:28x;">
+<ul>
+<li>For example, files and folders can also be accessed directly using applications such as Terminal on MacOS or Command Prompt on Windows.</li>
+</ul>
+</div>
+</div>
 </section>
 
 <section id="paths" class="title-slide slide level1 center">
@@ -497,7 +489,7 @@ Eren Bilen
 <section id="file-paths" class="title-slide slide level1 center">
 <h1>File Paths</h1>
 <ul>
-<li>A file path is a string that represents the location of a file. It’s broken up into three major parts:
+<li><p>A file path is a string that represents the location of a file. It’s broken up into three major parts:</p>
 <ul>
 <li><strong>Folder Path:</strong> the file folder location on the file system where subsequent folders are separated by a forward slash / (Unix or Mac) or backslash \ (Windows).</li>
 <li><strong>File Name:</strong> the actual name of the file.</li>
@@ -524,17 +516,27 @@ Eren Bilen
 <ul>
 <li>Whenever we execute our programs, the operating system maintains a concept of a working directory .</li>
 <li>Often, the working directory is initialized as the folder in which the file representing the program or executable resides.</li>
+<li>How is this related to Jupyter Notebook?</li>
 </ul>
 </section>
 
 <section id="section-4" class="title-slide slide level1 center">
 <h1></h1>
 
-<img data-src="assets/img/image8.png" class="r-stretch"><ul>
-<li><p>Suppose the current working directory is: <code>/home/alice/Documents</code></p></li>
-<li><p>The path “<code>./firstyear/ma135</code>” defines the traversal <code>/home/alice/Documents/firstyear/ma123</code></p></li>
-<li><p>The path “<code>../Pictures/profile.jpg</code>” defines the traversal <code>/home/alice/Pictures/profile.jpg</code> <span class="emoji" data-emoji="wrench">🔧</span>notice “Documents” is absent.</p></li>
+<img data-src="assets/img/image8.png" class="r-stretch"><p>Cool trick:</p>
+<ul>
+<li><p>Suppose the current working directory is: <span class="yellow" style="font-family: monospace;">/home/alice/Documents</span></p></li>
+<li><p>The path <span class="blue" style="font-family: monospace;">./firstyear/ma135</span> defines the traversal:</p></li>
 </ul>
+<div class="fragment" data-fragment-index="2">
+<p><span class="yellow" style="font-family: monospace;">/home/alice/Documents</span><span class="blue" style="font-family: monospace;">/firstyear/ma123</span></p>
+</div>
+<ul>
+<li>The path <span style="font-family:monospace; color:purple;">../Pictures/profile.jpg</span> defines the traversal:</li>
+</ul>
+<div class="fragment" data-fragment-index="3">
+<p><span style="font-family:monospace; color:green;">/home/alice</span><span style="font-family:monospace; color:purple;">/Pictures/profile.jpg</span> <span class="emoji" data-emoji="wrench">🔧</span>Notice <span class="yellow monospace">Documents</span> is absent.</p>
+</div>
 </section>
 
 <section id="opening-a-file-in-python" class="title-slide slide level1 center">
@@ -545,12 +547,12 @@ Eren Bilen
 <li>Before you can work with a file, you must open it.</li>
 </ul>
 </div>
-<p><img data-src="assets/img/yoda.jpg" class="fragment absolute" style="bottom: 360px; right: -70px; width: 4in; height: 3in; " data-fragment-index="2" data-right="100"></p>
+<p><img data-src="assets/img/yoda.jpg" class="fragment absolute" style="bottom: 370px; right: 77px; width: 4in; height: 3in; " data-fragment-index="2"></p>
 </div>
 <div class="fragment" data-fragment-index="3">
 <ul>
 <li><p>In Python we can use the built-in <code>open(.)</code> function. It takes, as arguments, a string specifying a path to a file, and a second string that specifies in what way the program will use the file, known as its mode .</p></li>
-<li><p>The <code>open(.)</code> function creates and returns a file object, which can be used to call other file support methods. <br> <span class="math inline">\(\hspace{1cm}\)</span> <code>file = open('hello.txt', 'r')</code> <br> <strong><u>hello.txt</u></strong> <br> Hello World!</p></li>
+<li><p>The <code>open(.)</code> function creates and returns a file object, which can be used to call other file support methods. <br> <span class="math inline">\(\hspace{1cm}\)</span> <code>file = open('hello.txt', 'r')</code> <br> <u>hello.txt</u> <br> Hello World!</p></li>
 </ul>
 </div>
 </section>
@@ -563,7 +565,7 @@ Eren Bilen
 <section id="access-modes-1" class="title-slide slide level1 center">
 <h1>Access Modes</h1>
 <ul>
-<li>In Python modes, we use <code>'t'</code> for text files, and <code>'b'</code> for binary files. A mode can include both the form of access as well as the file type, so a mode of <code>'rt'</code> would be used for read access to a text file, or a mode of <code>'wb'</code> would be used for write access to a binary file.
+<li><p>In Python modes, we use <code>'t'</code> for text files, and <code>'b'</code> for binary files. A mode can include both the form of access as well as the file type, so a mode of <code>'rt'</code> would be used for read access to a text file, or a mode of <code>'wb'</code> would be used for write access to a binary file.</p>
 <ul>
 <li>The default mode for <code>open(.)</code> is <code>'rt'</code> and can be omitted if this is the desired mode. <code>open('hello.txt')</code></li>
 </ul></li>
@@ -608,21 +610,29 @@ Eren Bilen
 <section id="closing-a-file" class="title-slide slide level1 center">
 <h1>Closing a File</h1>
 <ul>
-<li>When a program is finished with a file, you must call the <code>close(.)</code> method to allow the operating systems to clean up and release resources associated with the file connection: <code>file.close ()</code>
+<li><p>When a program is finished with a file, you must call the <code>close(.)</code> method to allow the operating systems to clean up and release resources associated with the file connection: <code>file.close ()</code></p>
 <ul>
 <li>Closing files is essential and forgetting to close files can have major negative consequences.</li>
 </ul></li>
 </ul>
+<div class="fragment">
+<ul>
+<li>You need to pay me a penny for each time you forget closing a file.</li>
+</ul>
+<iframe src="https://giphy.com/embed/HChtj3gzcVsXK" width="360" height="360" frameborder="0" class="giphy-embed" allowfullscreen="">
+</iframe>
+<p>
+<a href="https://giphy.com/gifs/rich-the-simpsons-laughing-HChtj3gzcVsXK">via GIPHY</a>
+</p>
+</div>
 </section>
 
 <section id="file-position" class="title-slide slide level1 center">
 <h1>File Position</h1>
 <ul>
-<li>Once you’ve opened a file, you’ll want to read or write to it .
+<li><p>Once you’ve opened a file, you’ll want to read or write to it .</p>
 <ul>
-<li>We must understand the concept of the current position in the file, which is an integer that operates much like a cursor in a word processor. It indicates where the next operation will occur.</li>
-<li>The file position starts at 0, which is the position at the very beginning of the file. When we perform any of a set of read-type operations, the operation reads in some number of characters and the file position is advanced.</li>
-<li>In this way, a subsequent read-type operation will continue from the point where the last read finished.</li>
+<li>The file position starts at line 0, which is the position at the very beginning of the file. When we perform any of a set of read-type operations, the operation reads in some number of characters and the file position is advanced.</li>
 </ul></li>
 </ul>
 </section>
@@ -646,8 +656,8 @@ Eren Bilen
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a>inputFile <span class="op">=</span> <span class="bu">open</span>(<span class="st">"twolines.txt"</span>) </span>
 <span id="cb2-2"><a href="#cb2-2"></a>filecontents <span class="op">=</span> inputFile.read() </span>
-<span id="cb2-3"><a href="#cb2-3"></a>Print(filecontents ) </span>
-<span id="cb2-4"><a href="#cb2-4"></a><span class="bu">print</span>( <span class="bu">repr</span>(filecontents)) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-3"><a href="#cb2-3"></a><span class="bu">print</span>(filecontents) </span>
+<span id="cb2-4"><a href="#cb2-4"></a><span class="bu">print</span>(<span class="bu">repr</span>(filecontents)) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><strong>Output:</strong> <br> <font face="monospace"> This is the first line.</font> <br> <font face="monospace"> This is the second line. </font> <br> <font face="monospace"> ‘This is the first line.\nThis is the second line.’</font></p>
 </section>
@@ -655,13 +665,14 @@ Eren Bilen
 <section id="readline.-method" class="title-slide slide level1 center">
 <h1><code>readline(.)</code> Method</h1>
 <p><img data-src="assets/img/image13.png"></p>
-<p>Output: <img data-src="assets/img/image14.png"></p>
+<p>Output:</p>
+<p><img data-src="assets/img/image14.png"></p>
 </section>
 
 <section id="strip.-and-rstrip." class="title-slide slide level1 center">
 <h1><code>strip(.)</code> and <code>rstrip(.)</code></h1>
 <ul>
-<li>If we are processing a file by lines and want to remove whitespace and newline characters, we can use
+<li><p>If we are processing a file by lines and want to remove whitespace and newline characters, we can use</p>
 <ul>
 <li><code>strip(.)</code> to eliminate both leading and trailing whitespace in a string</li>
 <li><code>rstrip(.)</code> to eliminate training whitespace in a string <img data-src="assets/img/image15.png"></li>
@@ -683,16 +694,16 @@ Eren Bilen
 <section id="split.-string-method" class="title-slide slide level1 center">
 <h1><code>split(.)</code> String Method</h1>
 <ul>
-<li>The <code>split(.)</code> method breaks a string at the specified separator and returns a list of strings.
+<li><p>The <code>split(.)</code> method breaks a string at the specified separator and returns a list of strings.</p>
 <ul>
 <li>The default separator is any whitespace.</li>
-</ul></li>
 </ul>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a>text <span class="op">=</span> <span class="st">"Python is a fun programming language"</span> </span>
 <span id="cb4-2"><a href="#cb4-2"></a><span class="bu">print</span>(text.split()) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p><u>Output:</u> <br> <font face="monospace">[‘Python’, ‘is’, ‘a’, ‘fun’, ‘programming’, ‘language’] </font></p>
+<p><u>Output:</u> <br> <font face="monospace">[‘Python’, ‘is’, ‘a’, ‘fun’, ‘programming’, ‘language’] </font></p></li>
+</ul>
 </section>
 
 <section id="another-split.-example" class="title-slide slide level1 center">
@@ -746,12 +757,9 @@ Eren Bilen
 <section id="methods-for-ensuring-a-file-is-closed" class="title-slide slide level1 center">
 <h1>Methods for Ensuring a File is Closed</h1>
 <ul>
-<li>A very common error in file processing is to fail to include the <code>close(.)</code> for an open file.
+<li><p>A very common error in file processing is to fail to include the <code>close(.)</code> for an open file.</p>
 <ul>
-<li>There are two ways that you can use to ensure that a file is properly closed, even when encountering an error: <code>try-finally</code> block and a <code>with</code> statement.
-<ul>
-<li><code>with</code> is typically more preferred.</li>
-</ul></li>
+<li>There are two ways that you can use to ensure that a file is properly closed, even when encountering an error: <code>try-finally</code> block and a <code>with</code> statement.</li>
 </ul></li>
 </ul>
 </section>
@@ -785,10 +793,9 @@ Eren Bilen
 <section id="with-continued" class="title-slide slide level1 center">
 <h1>with Continued</h1>
 <ul>
-<li>Most likely, you’ll also want to use the second positional argument, <code>mode</code>.
+<li><p>Most likely, you’ll also want to use the second positional argument, <code>mode</code>.</p>
 <ul>
 <li>This argument is a string that contains multiple characters to represent how you want to open the file. The default is read-only mode as a text file <code>'rt'</code>:</li>
-</ul></li>
 </ul>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">'dog_breeds.txt'</span>, <span class="st">'r'</span>) <span class="im">as</span> reader: </span>
@@ -822,7 +829,8 @@ Eren Bilen
 </table>
 
 </div>
-</div>
+</div></li>
+</ul>
 </section>
 
 <section id="readlines.method" class="title-slide slide level1 center">
@@ -890,7 +898,7 @@ Eren Bilen
 <section id="read-in-all-lines" class="title-slide slide level1 center">
 <h1>Read in All Lines</h1>
 <ul>
-<li>What if we wanted to process all the lines (names), rather than a set number.
+<li><p>What if we wanted to process all the lines (names), rather than a set number.</p>
 <ul>
 <li>The pattern of processing a file by lines in an iterative manners is a very common practice.</li>
 <li>We can do this by allowing the file object itself to be an iterator.</li>
