@@ -10,7 +10,7 @@
 * **Meeting day/time**: T-F 3:00-4:15pm, Tome 121
 * Office hours also available by appointment.
 * **QRA:** Elsa Hritz [hritze@dickinson.edu](mailto:hritze@dickinson.edu)
-* **QRA Office Hours:** M-W 7-8pm, Tome 121
+* **QRA Office Hours:** M-W 7-8pm, Rector 1311
 
 ## Course description ##
 
