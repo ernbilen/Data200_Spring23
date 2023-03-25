@@ -12,7 +12,7 @@ Enter your name in the markdown cell below.
 
 # Tasks
 
-- **Make sure you have installed SQL Magic before beginning**--see pages 177-179 in the Course Notes.
+- **Make sure you have installed SQL Magic before you begin** via `! pip install ipython-sql`.
 - Review pages 313-335 in the Bressoud & White Introduction to Data Systems.
 - Complete the **Selecting Columns** and **Filtering Rows** chapters of the **Intermediate SQL Queries** course on DataCamp.
 
